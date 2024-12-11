@@ -351,7 +351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRigidbody: {fileID: 5209305045270567243}
   movementspeed: 12
-  currentWeapon: {fileID: 0}
+  currentWeapon: {fileID: 11400000, guid: 2d3e2164d148c4120af92587c8d0b4cd, type: 2}
   health: 5
   distanceToStop: 8
   attackCooldown: 2

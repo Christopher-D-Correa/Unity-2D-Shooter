@@ -22,7 +22,8 @@ public class Enemy : Character
     {
         if (healthValue.GetHealthValue() <= 0)
         {
-            Destroy(gameObject);
+            PlayDeadEffect();
+           
         }
 
         if (!target) return;
@@ -53,6 +54,8 @@ public class Enemy : Character
     public override void PlayDeadEffect()
     {
         GameManager.instance.RemoveEnemyFromList(gameObject);
+
+
         base.PlayDeadEffect();
     }
 

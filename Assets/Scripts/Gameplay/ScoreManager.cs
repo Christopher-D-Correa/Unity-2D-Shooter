@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,12 +13,24 @@ public class ScoreManager : MonoBehaviour
     [Header("Score Values")]
     [SerializeField] private int scorePerEnemy;
     [SerializeField] private int scorePerCoin;
-    [SerializeField] private int scorePerPowerUp;
+    [SerializeField] private int scorePerPowerUp; 
+
+    [SerializeField] private List<ScoreData> allScores = new List<ScoreData>();
+    [SerializeField] private ScoreData latestScore;
 
     // Start is called before the first frame update
     void Start()
     {
+        Player playerObject = FindObjectOfType<Player>();
+        playerObject.healthValue.OnDied.AddListener(RegisterScore);
 
+        highestScore = PlayerPrefs.GetInt("HighScore");
+
+        //AT start of the game
+        // Retreive the string from player prefs 
+        string latestScoreInJson = PlayerPrefs.GetString("LatestScore");
+        //and try to convert it back into a ScoreData object/class
+        latestScore = JsonUtility.FromJson<ScoreData>(latestScoreInJson);
     }
 
     // Update is called once per frame
@@ -57,6 +70,26 @@ public class ScoreManager : MonoBehaviour
         }
 
         OnScoreChanged.Invoke(totalScore);
+    }
+
+    private void RegisterScore() //when player dies 
+    {
+        //Create an object filled with information 
+        latestScore = new ScoreData("CC", totalScore);
+       
+        //Convert the object (class) into a string in json format
+        string latestScoreInJson = JsonUtility.ToJson(latestScore);
+
+        //save that string into PlayerPrefs
+        PlayerPrefs.SetString("LatestScore", latestScoreInJson);
+
+
+        if (totalScore > highestScore)
+        {
+            //WE GOT A NEW HIGH SCORE
+            highestScore = totalScore;
+            PlayerPrefs.SetInt("HighScore", highestScore);
+        }
     }
 }
 

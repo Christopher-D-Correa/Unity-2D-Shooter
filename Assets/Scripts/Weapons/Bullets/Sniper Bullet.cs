@@ -11,6 +11,7 @@ public class SniperBullet : MonoBehaviour
     void Start()
     {
         myRigidbody.velocity = transform.up * bulletSpeed;
+
     }
 
     // Update is called once per frame
@@ -24,6 +25,7 @@ public class SniperBullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<Player>().healthValue.DecreaseHealth(5);
+            
         }
 
         Destroy(gameObject);

@@ -18,7 +18,7 @@ public class ExplodingEnemy : Enemy
     {
         if (collision.gameObject.tag == "Player")
         {
-            Destroy(gameObject);
+            base.PlayDeadEffect();
             collision.gameObject.GetComponent<Player>().healthValue.DecreaseHealth(3);
         }
     }

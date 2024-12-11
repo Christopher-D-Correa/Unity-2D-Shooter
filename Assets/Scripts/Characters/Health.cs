@@ -4,6 +4,7 @@ using UnityEngine.Events;
 public class Health
 
 {
+    public UnityEvent<float> OnHealthChanged;
     public UnityEvent OnDied;
     private float healthValue;
 
@@ -11,6 +12,7 @@ public class Health
     {
         healthValue -= damageParameter;
         Debug.Log("Health decreasing to: " + healthValue);
+        OnHealthChanged.Invoke(healthValue);
         //Update The UI
         //Check If Is Dead
         if(IsDead())
@@ -24,7 +26,9 @@ public class Health
 
     public void IncreaseHealth(float increaseParameter)
     {
-        healthValue += increaseParameter;
+        healthValue += increaseParameter; 
+
+        OnHealthChanged.Invoke(healthValue);
     }
 
     public bool IsDead()
@@ -45,13 +49,15 @@ public class Health
     {
         healthValue = 100;
         OnDied = new UnityEvent();
+        OnHealthChanged = new UnityEvent<float>();
     }
       
-
+     
     public Health(float initialHealth)
     {
         healthValue = initialHealth;
         OnDied = new UnityEvent();
+        OnHealthChanged = new UnityEvent<float>();
         //This parameter allows us to change around
         //playerHealth = new Health() in Game Manager
     }

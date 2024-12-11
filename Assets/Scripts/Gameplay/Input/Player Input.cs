@@ -18,6 +18,12 @@ public class PlayerInput : MonoBehaviour
             Vector3 rot = transform.localEulerAngles;
             rot.z += 1.5f;
             transform.localEulerAngles = rot;
+
+            if (gameObject.tag == "Enemy")
+            {
+                Destroy(gameObject); 
+            }
+
             if (Time.time > timer)
             {
                 isSpinning = false;

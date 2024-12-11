@@ -74,8 +74,10 @@ public class GameManager : MonoBehaviour
 
     {
         scoreManager.IncreaseScore(ScoreType.EnemyKilled);
-        int enemy = EnemyList.IndexOf(enemyToBeRemoved);
-        listOfAllEnemiesAlive.RemoveAt(enemy);
+        //int enemy = EnemyList.IndexOf(enemyToBeRemoved);
+        //listOfAllEnemiesAlive.RemoveAt(enemy);
+        listOfAllEnemiesAlive.Remove(enemyToBeRemoved);
+
 
         /*
         for (int index = 0; index < listOfAllEnemiesAlive.Count; index++)
