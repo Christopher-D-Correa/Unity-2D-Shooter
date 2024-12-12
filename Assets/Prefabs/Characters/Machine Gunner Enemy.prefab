@@ -269,7 +269,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.921, y: 0.785, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8, y: 1.8, z: 1.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7404885316972984378}
@@ -350,10 +350,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigidbody: {fileID: 5209305045270567243}
-  movementspeed: 12
+  movementspeed: 15
   currentWeapon: {fileID: 11400000, guid: 2d3e2164d148c4120af92587c8d0b4cd, type: 2}
   health: 5
-  distanceToStop: 8
+  dieEffect: {fileID: 4593184484909914552, guid: 2e1e9506f5904a64b81744324fb7cd50, type: 3}
+  healthPickUp: {fileID: 4836854046046055030, guid: c9c74dea65029433592d6e7b1f9dd79f, type: 3}
+  distanceToStop: 7
   attackCooldown: 2
   bulletPrefab: {fileID: 9113370102975280804, guid: 7cdb5832e9ca4454bbc03875c1e09acc, type: 3}
   weaponTip: {fileID: 7827434134190772375}

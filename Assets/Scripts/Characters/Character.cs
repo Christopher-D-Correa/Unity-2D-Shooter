@@ -5,11 +5,11 @@ public class Character : MonoBehaviour
     [SerializeField] private Rigidbody2D myRigidbody;
     [SerializeField] private float movementspeed = 10f;
     protected float speed;
-    //Protected is same as private but can be accessed by inherited classes 
     public Health healthValue;
     public Weapon currentWeapon;
     [SerializeField] private float health;
-
+    [SerializeField] private GameObject dieEffect;
+    public GameObject healthPickUp;
 
     protected virtual void Start()
     {
@@ -37,9 +37,18 @@ public class Character : MonoBehaviour
 
     public virtual void PlayDeadEffect()
     {
+        Instantiate(dieEffect, transform.position, Quaternion.identity);
+        Invoke("spawnHealthPickUp", .5f);
         Destroy(gameObject);
     }
-    
+
+    public void spawnHealthPickUp()
+    {
+        Debug.Log("spawnHealthPickUp");
+        Instantiate(healthPickUp, transform.position, Quaternion.identity);
+    }
+
+   
 
     public void Interact()
 

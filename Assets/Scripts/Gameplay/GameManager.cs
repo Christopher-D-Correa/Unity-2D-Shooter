@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<GameObject> listOfAllEnemiesAlive;
 
     private ScoreManager scoreManager;
+
+    public UnityEvent OnGameStart;
+    public UnityEvent OnGameOver; 
    
     public List<GameObject> EnemyList = new List<GameObject>();
     
@@ -29,7 +32,14 @@ public class GameManager : MonoBehaviour
 
         StartCoroutine(SpawnWaveOfEnemies());
         scoreManager = GetComponent<ScoreManager>();
-    } 
+        FindObjectOfType<Player>().healthValue.OnDied.AddListener(GameOver);
+    }
+
+    private void GameOver()
+    {
+        OnGameOver.Invoke();
+        StopAllCoroutines();
+    }
 
 
     void Update()
@@ -110,7 +120,6 @@ public class GameManager : MonoBehaviour
         }
 
     }
-
 
 
 

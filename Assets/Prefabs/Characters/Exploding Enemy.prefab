@@ -268,7 +268,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.834, y: 3.736, z: 0}
-  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
+  m_LocalScale: {x: 2.4, y: 2.4, z: 2.4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1783151803132037116}
@@ -352,6 +352,8 @@ MonoBehaviour:
   movementspeed: 15
   currentWeapon: {fileID: 11400000, guid: 2d3e2164d148c4120af92587c8d0b4cd, type: 2}
   health: 1
+  dieEffect: {fileID: 2708598583397607911, guid: 6398d43fe79ea0140913dc5530c646af, type: 3}
+  healthPickUp: {fileID: 4836854046046055030, guid: c9c74dea65029433592d6e7b1f9dd79f, type: 3}
   distanceToStop: 0
   attackCooldown: 3
   bulletPrefab: {fileID: 0}
