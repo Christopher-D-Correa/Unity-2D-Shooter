@@ -145,7 +145,7 @@ MonoBehaviour:
   currentWeapon: {fileID: 11400000, guid: 9113531db4a114092b9e10689d0939ed, type: 2}
   health: 3
   dieEffect: {fileID: 8038344524183138613, guid: 0277167a12290af47801444830a2be97, type: 3}
-  healthPickUp: {fileID: 4836854046046055030, guid: c9c74dea65029433592d6e7b1f9dd79f, type: 3}
+  healthPickUp: {fileID: 6586401274140565176, guid: 242c75a602e53465c84200a4f0e72c31, type: 3}
   distanceToStop: 18
   attackCooldown: 6
   bulletPrefab: {fileID: 8882910271104721485, guid: f7fcb7068d1d040dcba9479afcabfefd, type: 3}
@@ -214,7 +214,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 36bacdcdccd2043d4a99eba5e7c64f18, type: 2}
+  - {fileID: 2100000, guid: 8e0364852bc1a014598ff6ea9a434d9e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -310,7 +310,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 8d6109005d5944927ab31cf68c45cf53, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -332,7 +332,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.047169805, g: 0.043832317, b: 0.043832317, a: 1}
+  m_Color: {r: 0.1586991, g: 0.3490566, b: 0.021404423, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -340,5 +340,5 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0

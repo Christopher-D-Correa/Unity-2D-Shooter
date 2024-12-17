@@ -88,7 +88,7 @@ public class ScoreManager : MonoBehaviour
         {
             //WE GOT A NEW HIGH SCORE
             highestScore = totalScore;
-            PlayerPrefs.SetInt("HighScore", highestScore);
+            PlayerPrefs.SetInt("HighScore", highestScore); 
         }
     }
 }

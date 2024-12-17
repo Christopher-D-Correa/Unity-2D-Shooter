@@ -353,7 +353,7 @@ MonoBehaviour:
   currentWeapon: {fileID: 11400000, guid: 2d3e2164d148c4120af92587c8d0b4cd, type: 2}
   health: 1
   dieEffect: {fileID: 2708598583397607911, guid: 6398d43fe79ea0140913dc5530c646af, type: 3}
-  healthPickUp: {fileID: 4836854046046055030, guid: c9c74dea65029433592d6e7b1f9dd79f, type: 3}
+  healthPickUp: {fileID: 6586401274140565176, guid: 242c75a602e53465c84200a4f0e72c31, type: 3}
   distanceToStop: 0
   attackCooldown: 3
   bulletPrefab: {fileID: 0}

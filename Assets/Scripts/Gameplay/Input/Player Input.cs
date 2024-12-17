@@ -8,13 +8,21 @@ public class PlayerInput : MonoBehaviour
     public Vector2 direction;
     public Vector3 mousePosition;
     public Vector3 lookDirection;
-    //Create starting point for position of mouse on the screen in pixels
-    //Pixels go from bottom left to top right 
+    public BoxCollider2D laserBox;
+
+    public void startBlossom()
+    {
+        StartCoroutine(Deathblossom());
+    }
+   
     public IEnumerator Deathblossom()
     {
+        isSpinning = true;
         float timer = Time.time + 2f;
         while (isSpinning == true)
         {
+            laserBox.enabled = true;
+            //enabled clicks check box on collider, turn component on and off 
             Vector3 rot = transform.localEulerAngles;
             rot.z += 1.5f;
             transform.localEulerAngles = rot;
@@ -32,6 +40,8 @@ public class PlayerInput : MonoBehaviour
 
 
         }
+
+        laserBox.enabled = false;
     }
     void Start()
     {
@@ -57,15 +67,7 @@ public class PlayerInput : MonoBehaviour
             lookDirection = destination - transform.position;
             player.Look(lookDirection);
             //shortcut to access main camera in game
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                isSpinning = true;
-                StartCoroutine(Deathblossom());
-                  
-
-        
-            }
-
+           
 
             if (Input.GetMouseButtonDown(0))
             {

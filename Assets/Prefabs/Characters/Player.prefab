@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 8619279181028685180}
   - component: {fileID: 4891350496885764199}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: LaserBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -272,7 +272,7 @@ GameObject:
   - component: {fileID: 848153301140074683}
   m_Layer: 0
   m_Name: Visual
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -322,7 +322,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a3baf184d841f420d9c895abfa6006da, type: 2}
+  - {fileID: 2100000, guid: 2a30a9701bfdf463990538766c4eeecb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -467,6 +467,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   mousePosition: {x: 0, y: 0, z: 0}
   lookDirection: {x: 0, y: 0, z: 0}
+  laserBox: {fileID: 4891350496885764199}
 --- !u!1 &7113296771725901359
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,7 +628,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
-  m_Color: {r: 0.047169805, g: 0.042052325, b: 0.042052325, a: 1}
+  m_Color: {r: 0.2264151, g: 0.19971521, b: 0.20083351, a: 0.50980395}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2

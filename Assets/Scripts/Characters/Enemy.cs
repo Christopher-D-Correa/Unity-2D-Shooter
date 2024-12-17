@@ -23,7 +23,7 @@ public class Enemy : Character
         if (healthValue.GetHealthValue() <= 0)
         {
             PlayDeadEffect();
-           
+
         }
 
         if (!target) return;
